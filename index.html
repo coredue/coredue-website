@@ -1,0 +1,1046 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CoreDue Consulting 科度教育咨询，提供新加坡留学规划、低龄留学、AEIS路径、国际学校申请、升学规划、学生签证与落地支持。">
+  <title>CoreDue Consulting | 科度教育咨询</title>
+  <style>
+:root {
+  --blue: #0b2341;
+  --blue-soft: #163a63;
+  --gold: #d8b56d;
+  --gold-soft: #f4ead4;
+  --white: #ffffff;
+  --ink: #172033;
+  --muted: #627084;
+  --line: #e6ebf1;
+  --bg: #f7f9fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.nav {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  color: var(--blue);
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  font-weight: 800;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.lang-toggle,
+.nav-toggle {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.lang-toggle {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--blue);
+  background: var(--gold-soft);
+  font-weight: 800;
+}
+
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px auto;
+  background: var(--blue);
+}
+
+.section {
+  padding: 72px 18px;
+}
+
+.section > * {
+  width: min(1120px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alt {
+  background: var(--bg);
+}
+
+.hero {
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  gap: 28px;
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(11, 35, 65, 0.95), rgba(11, 35, 65, 0.78)),
+    radial-gradient(circle at 80% 20%, rgba(216, 181, 109, 0.25), transparent 34%),
+    linear-gradient(45deg, #0b2341, #24537f);
+}
+
+.hero-content,
+.hero-panel {
+  width: min(1120px, 100%);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 780px;
+  margin-bottom: 18px;
+  font-size: clamp(40px, 9vw, 76px);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: var(--blue);
+  font-size: clamp(28px, 6vw, 44px);
+  line-height: 1.2;
+}
+
+h3 {
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.hero-text {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+}
+
+.hero-actions,
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn.primary {
+  color: var(--blue);
+  background: var(--gold);
+}
+
+.btn.secondary {
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.contact .btn.secondary {
+  color: var(--blue);
+  background: var(--white);
+}
+
+.hero-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.hero-panel div {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-panel span {
+  display: block;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero-panel strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.hero-team-card ul {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-team-card li {
+  position: relative;
+  margin-top: 7px;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.hero-team-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.section-heading p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.split,
+.about-grid,
+.about-story {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.split > p,
+.about-card,
+.story-card,
+.quote,
+.card,
+.service-list > div,
+.features > div,
+.timeline li,
+.contact-grid a,
+.contact-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.split > p,
+.about-card,
+.story-card,
+.quote {
+  padding: 26px;
+  font-size: 18px;
+}
+
+.about-story {
+  grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+  align-items: start;
+}
+
+.story-card {
+  padding: 32px;
+}
+
+.story-card h3 {
+  margin-bottom: 14px;
+  font-size: 26px;
+}
+
+.story-card p {
+  margin-bottom: 16px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.story-card p:last-child {
+  margin-bottom: 0;
+}
+
+.story-lead {
+  padding-left: 16px;
+  border-left: 4px solid var(--gold);
+  color: var(--blue) !important;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.55 !important;
+}
+
+.about-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.about-card {
+  font-size: 15px;
+}
+
+.about-card span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.about-card h3 {
+  margin-bottom: 8px;
+}
+
+.about-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.about-grid .quote {
+  grid-column: 1 / -1;
+  padding: 22px 26px;
+}
+
+.about-grid .quote p {
+  margin-bottom: 6px;
+}
+
+.quote {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.quote p {
+  color: var(--blue);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.quote span {
+  color: var(--muted);
+}
+
+.card-grid,
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card,
+.features > div {
+  padding: 22px;
+}
+
+.card p,
+.features p,
+.service-list p,
+.timeline p {
+  color: var(--muted);
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.service-list > div {
+  padding: 24px;
+  border-top: 4px solid var(--gold);
+}
+
+.features strong {
+  display: block;
+  color: var(--blue);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.feature-long p {
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+.feature-long p:last-child {
+  margin-bottom: 0;
+}
+
+.feature-highlight {
+  padding: 12px 14px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  color: var(--blue) !important;
+  background: var(--gold-soft);
+  font-weight: 750;
+}
+
+.timeline {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.timeline li {
+  padding: 22px;
+}
+
+.timeline span {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.contact {
+  color: var(--white);
+  background: var(--blue);
+}
+
+.contact h2 {
+  color: var(--white);
+}
+
+.contact .section-heading p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.contact-grid a,
+.contact-card {
+  padding: 20px;
+  color: var(--blue);
+}
+
+.contact-grid span,
+.contact-grid strong,
+.contact-card span,
+.contact-card strong {
+  display: block;
+}
+
+.contact-grid span,
+.contact-card span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.copy-mini {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 8px;
+  color: var(--blue);
+  background: var(--gold-soft);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 24px 18px;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+  background: #07192f;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 880px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 18px 18px;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-links a,
+  .nav-links button {
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+  }
+
+  .nav-open .nav-links {
+    display: flex;
+  }
+
+  .section {
+    padding: 56px 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 82px;
+  }
+
+  .hero-panel,
+  .split,
+  .about-grid,
+  .about-story,
+  .card-grid,
+  .features,
+  .service-list,
+  .timeline,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid .quote {
+    grid-column: auto;
+  }
+
+  .story-card {
+    padding: 24px;
+  }
+
+  .story-card h3 {
+    font-size: 23px;
+  }
+
+  .story-card p {
+    font-size: 16px;
+    line-height: 1.78;
+  }
+
+  .story-lead {
+    font-size: 18px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 881px) and (max-width: 1080px) {
+  .card-grid,
+  .features,
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#hero" aria-label="CoreDue Consulting">
+        <span class="brand-mark">CD</span>
+        <span>
+          <strong>CoreDue Consulting</strong>
+          <small data-i18n="brandSub">科度教育咨询</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about" data-i18n="navAbout">关于我们</a>
+        <a href="#services" data-i18n="navServices">服务内容</a>
+        <a href="#pathways" data-i18n="navPathways">升学路径</a>
+        <a href="#why" data-i18n="navWhy">为什么选择我们</a>
+        <a href="#process" data-i18n="navProcess">服务流程</a>
+        <a href="#contact" data-i18n="navContact">联系我们</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="heroEyebrow">新加坡留学规划 · 低龄留学 · 升学申请</p>
+        <h1 data-i18n="heroTitle">找到重要的那一度</h1>
+        <p class="hero-text" data-i18n="heroText">从低龄留学到本科硕士，规划适合自己的成长之路</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact" data-i18n="ctaBook">预约咨询</a>
+          <a class="btn secondary" href="#wechat-contact" data-i18n="ctaWechatHero">微信联系</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="CoreDue service highlights">
+        <div>
+          <span data-i18n="heroStatOne">全阶段规划</span>
+          <strong data-i18n="heroStatOneText">幼儿园至硕士路径衔接</strong>
+        </div>
+        <div>
+          <span data-i18n="heroStatTwo">中英双语</span>
+          <strong data-i18n="heroStatTwoText">家长沟通与院校对接</strong>
+        </div>
+        <div>
+          <span data-i18n="heroStatThree">落地陪伴</span>
+          <strong data-i18n="heroStatThreeText">签证、住宿、陪读支持</strong>
+        </div>
+        <div class="hero-team-card">
+          <span data-i18n="heroStatFour">专业团队</span>
+          <strong data-i18n="heroStatFourText">懂留学，也懂成长</strong>
+          <ul>
+            <li data-i18n="heroTeamOne">海外求学与职业发展亲身经历</li>
+            <li data-i18n="heroTeamTwo">长期在新加坡学习、工作和生活</li>
+            <li data-i18n="heroTeamThree">熟悉新加坡教育体系与升学路径</li>
+            <li data-i18n="heroTeamFour">关注学生长期成长与未来发展</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="aboutEyebrow">About CoreDue</p>
+        <h2 data-i18n="aboutTitle">关于 CoreDue</h2>
+      </div>
+      <div class="about-story">
+        <article class="story-card">
+          <h3 data-i18n="aboutStoryTitle">我们的故事</h3>
+          <p class="story-lead" data-i18n="aboutStoryLead">CoreDue 的故事，始于一群曾经走过留学之路的人。</p>
+          <p data-i18n="aboutStoryTextOne">我们曾在中国和新加坡求学、工作与生活，也曾经历专业选择、升学规划和未来发展的迷茫与挑战。正因为亲身走过这段旅程，我们更理解每一个家庭在教育选择面前的期待、焦虑与不确定。</p>
+          <p data-i18n="aboutStoryTextTwo">多年来，我们持续关注学生成长与升学规划，见证许多学生从迷茫到坚定，从探索到成长。我们相信，每个孩子都有属于自己的节奏和方向，而教育规划不只是学校申请，更是一场关于成长、选择与未来发展的长期陪伴。</p>
+          <p data-i18n="aboutStoryTextThree">因此，我们创立了 CoreDue，希望结合自身经历、新加坡本地资源和专业经验，帮助更多学生找到真正适合自己的道路。</p>
+        </article>
+        <div class="quote">
+          <p data-i18n="aboutQuote">“不只教你更多，而是帮你找到真正重要的那一度。”</p>
+          <span data-i18n="aboutQuoteEn">Not more, but what truly matters.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="servicesEyebrow">Education Services</p>
+        <h2 data-i18n="servicesTitle">新加坡教育咨询服务</h2>
+        <p data-i18n="servicesIntro">围绕择校、申请、签证与落地四个关键环节，为家庭提供清晰、省心、可执行的规划。</p>
+      </div>
+      <div class="card-grid">
+        <article class="card"><h3 data-i18n="serviceOneTitle">低龄留学与 AEIS 路径规划</h3><p data-i18n="serviceOneText">面向小学、初中阶段学生，规划政府学校入学、AEIS备考、PSLE与DSA等关键节点。</p></article>
+        <article class="card"><h3 data-i18n="serviceTwoTitle">国际学校 / 私立学校申请</h3><p data-i18n="serviceTwoText">匹配IB、IGCSE、A-Level、AP等课程体系，协助选校、材料准备、面试准备与申请跟进。</p></article>
+        <article class="card"><h3 data-i18n="serviceThreeTitle">Diploma、本科、硕士升学规划</h3><p data-i18n="serviceThreeText">覆盖公立大学、私立大学、预科、Diploma、本科与硕士路径，结合学生背景制定升学方案。</p></article>
+        <article class="card"><h3 data-i18n="serviceFourTitle">学生签证与落地支持</h3><p data-i18n="serviceFourText">提供学生准证材料指导、入境安排、住宿、陪读、银行开户与本地生活支持。</p></article>
+      </div>
+    </section>
+
+    <section id="pathways" class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="pathwaysEyebrow">Singapore Pathways</p>
+        <h2 data-i18n="pathwaysTitle">新加坡留学路径</h2>
+      </div>
+      <div class="service-list">
+        <div><h3 data-i18n="pathOneTitle">政府中小学</h3><p data-i18n="pathOneText">适合重视性价比、双语环境和长期身份规划的家庭，可关注小一入学、AEIS插班、PSLE与DSA路径。</p></div>
+        <div><h3 data-i18n="pathTwoTitle">国际学校</h3><p data-i18n="pathTwoText">适合计划未来衔接欧美澳高校的学生，覆盖IB、IGCSE、A-Level、AP等主流国际课程体系。</p></div>
+        <div><h3 data-i18n="pathThreeTitle">大学与研究生</h3><p data-i18n="pathThreeText">可选择新加坡公立大学、认证私立大学、海外大学新加坡校区及硕士项目，兼顾学制、预算与发展方向。</p></div>
+      </div>
+    </section>
+
+    <section id="why" class="section alt">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="whyEyebrow">Why CoreDue</p>
+        <h2 data-i18n="whyTitle">为什么选择我们</h2>
+      </div>
+      <div class="features">
+        <div><strong data-i18n="whyOneTitle">新加坡本地视角</strong><p data-i18n="whyOneText">熟悉本地教育体系、申请规则、学校生态与生活安排。</p></div>
+        <div><strong data-i18n="whyTwoTitle">定制化规划</strong><p data-i18n="whyTwoText">不做模板化择校，以学生能力、家庭目标、时间线和预算为基础。</p></div>
+        <div><strong data-i18n="whyThreeTitle">透明沟通</strong><p data-i18n="whyThreeText">服务节点清楚，材料要求明确，申请进度持续跟进。</p></div>
+        <div><strong data-i18n="whyFourTitle">长期陪伴</strong><p data-i18n="whyFourText">教育规划不只是学校申请，更是一场关于成长、选择与未来发展的长期陪伴。</p></div>
+        <div class="feature-long feature-team">
+          <strong data-i18n="whyFiveTitle">专业团队</strong>
+          <p data-i18n="whyFiveTextOne">团队成员拥有海外求学及跨文化发展经历，曾在新加坡国立大学、中国科学院从事科研与教学工作。</p>
+          <p class="feature-highlight" data-i18n="whyFiveTextTwo">长期深耕教育领域，善于发现学生优势与潜力，帮助他们突破成长瓶颈，找到适合自己的成长路径。</p>
+          <p data-i18n="whyFiveTextThree">多年来，已陪伴和指导多名学生完成从升学规划到职业发展的关键阶段选择。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="processEyebrow">Process</p>
+        <h2 data-i18n="processTitle">服务流程</h2>
+      </div>
+      <ol class="timeline">
+        <li><span>01</span><h3 data-i18n="stepOneTitle">初步沟通</h3><p data-i18n="stepOneText">了解学生背景、家庭目标、预算范围和期望入学时间。</p></li>
+        <li><span>02</span><h3 data-i18n="stepTwoTitle">路径评估</h3><p data-i18n="stepTwoText">梳理学校类型、升学路线、申请难点、风险和材料清单。</p></li>
+        <li><span>03</span><h3 data-i18n="stepThreeTitle">申请执行</h3><p data-i18n="stepThreeText">推进选校、文书材料、报名申请、面试准备与签证指导。</p></li>
+        <li><span>04</span><h3 data-i18n="stepFourTitle">落地支持</h3><p data-i18n="stepFourText">协助入境、住宿、陪读、银行开户和后续学业跟进。</p></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+        <h2 data-i18n="contactTitle">联系我们</h2>
+        <p data-i18n="contactText">欢迎预约一次初步沟通，我们会根据孩子的阶段和目标提供下一步建议。</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:infocoredue@gmail.com"><span data-i18n="contactEmailLabel">邮箱 / Email</span><strong>infocoredue@gmail.com</strong></a>
+        <a href="https://wa.me/6580393132"><span>WhatsApp</span><strong>+65 80393132</strong></a>
+        <div class="contact-card wechat-card" id="wechat-contact">
+          <span data-i18n="contactWechatLabel">微信 / WeChat</span>
+          <strong>CoreDue</strong>
+          <button class="copy-mini" type="button" data-copy-wechat data-i18n="ctaWechat">复制微信号</button>
+        </div>
+        <a href="tel:+8613705215979"><span data-i18n="contactChinaLabelOne">联系电话</span><strong data-i18n="contactChinaOne">刘先生 +86 13705215979</strong></a>
+        <a href="tel:+8618612239691"><span data-i18n="contactChinaLabelTwo">联系电话</span><strong data-i18n="contactChinaTwo">武先生 +86 18612239691</strong></a>
+      </div>
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:infocoredue@gmail.com" data-i18n="ctaEmail">发送邮件</a>
+        <button class="btn secondary" type="button" data-copy-wechat data-i18n="ctaWechat">复制微信号</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 CoreDue Consulting. <span data-i18n="footerText">科度咨询 / 科度教育咨询</span></p>
+  </footer>
+
+  <script>
+const translations = {
+  zh: {
+    brandSub: "科度教育咨询",
+    navAbout: "关于我们",
+    navServices: "服务内容",
+    navPathways: "升学路径",
+    navWhy: "为什么选择我们",
+    navProcess: "服务流程",
+    navContact: "联系我们",
+    heroEyebrow: "新加坡留学规划 · 低龄留学 · 升学申请",
+    heroTitle: "找到重要的那一度",
+    heroText: "从低龄留学到本科硕士，规划适合自己的成长之路",
+    ctaBook: "预约咨询",
+    ctaWechatHero: "微信联系",
+    heroStatOne: "全阶段规划",
+    heroStatOneText: "幼儿园至硕士路径衔接",
+    heroStatTwo: "中英双语",
+    heroStatTwoText: "家长沟通与院校对接",
+    heroStatThree: "落地陪伴",
+    heroStatThreeText: "签证、住宿、陪读支持",
+    heroStatFour: "专业团队",
+    heroStatFourText: "懂留学，也懂成长",
+    heroTeamOne: "海外求学与职业发展亲身经历",
+    heroTeamTwo: "长期在新加坡学习、工作和生活",
+    heroTeamThree: "熟悉新加坡教育体系与升学路径",
+    heroTeamFour: "关注学生长期成长与未来发展",
+    aboutEyebrow: "About CoreDue",
+    aboutTitle: "关于 CoreDue",
+    aboutStoryTitle: "我们的故事",
+    aboutStoryLead: "CoreDue 的故事，始于一群曾经走过留学之路的人。",
+    aboutStoryTextOne: "我们曾在中国和新加坡求学、工作与生活，也曾经历专业选择、升学规划和未来发展的迷茫与挑战。正因为亲身走过这段旅程，我们更理解每一个家庭在教育选择面前的期待、焦虑与不确定。",
+    aboutStoryTextTwo: "多年来，我们持续关注学生成长与升学规划，见证许多学生从迷茫到坚定，从探索到成长。我们相信，每个孩子都有属于自己的节奏和方向，而教育规划不只是学校申请，更是一场关于成长、选择与未来发展的长期陪伴。",
+    aboutStoryTextThree: "因此，我们创立了 CoreDue，希望结合自身经历、新加坡本地资源和专业经验，帮助更多学生找到真正适合自己的道路。",
+    aboutQuote: "“不只教你更多，而是帮你找到真正重要的那一度。”",
+    aboutQuoteEn: "Not more, but what truly matters.",
+    servicesEyebrow: "Education Services",
+    servicesTitle: "新加坡教育咨询服务",
+    servicesIntro: "围绕择校、申请、签证与落地四个关键环节，为家庭提供清晰、省心、可执行的规划。",
+    serviceOneTitle: "低龄留学与 AEIS 路径规划",
+    serviceOneText: "面向小学、初中阶段学生，规划政府学校入学、AEIS备考、PSLE与DSA等关键节点。",
+    serviceTwoTitle: "国际学校 / 私立学校申请",
+    serviceTwoText: "匹配IB、IGCSE、A-Level、AP等课程体系，协助选校、材料准备、面试准备与申请跟进。",
+    serviceThreeTitle: "Diploma、本科、硕士升学规划",
+    serviceThreeText: "覆盖公立大学、私立大学、预科、Diploma、本科与硕士路径，结合学生背景制定升学方案。",
+    serviceFourTitle: "学生签证与落地支持",
+    serviceFourText: "提供学生准证材料指导、入境安排、住宿、陪读、银行开户与本地生活支持。",
+    pathwaysEyebrow: "Singapore Pathways",
+    pathwaysTitle: "新加坡留学路径",
+    pathOneTitle: "政府中小学",
+    pathOneText: "适合重视性价比、双语环境和长期身份规划的家庭，可关注小一入学、AEIS插班、PSLE与DSA路径。",
+    pathTwoTitle: "国际学校",
+    pathTwoText: "适合计划未来衔接欧美澳高校的学生，覆盖IB、IGCSE、A-Level、AP等主流国际课程体系。",
+    pathThreeTitle: "大学与研究生",
+    pathThreeText: "可选择新加坡公立大学、认证私立大学、海外大学新加坡校区及硕士项目，兼顾学制、预算与发展方向。",
+    whyEyebrow: "Why CoreDue",
+    whyTitle: "为什么选择我们",
+    whyOneTitle: "新加坡本地视角",
+    whyOneText: "熟悉本地教育体系、申请规则、学校生态与生活安排。",
+    whyTwoTitle: "定制化规划",
+    whyTwoText: "不做模板化择校，以学生能力、家庭目标、时间线和预算为基础。",
+    whyThreeTitle: "透明沟通",
+    whyThreeText: "服务节点清楚，材料要求明确，申请进度持续跟进。",
+    whyFourTitle: "长期陪伴",
+    whyFourText: "教育规划不只是学校申请，更是一场关于成长、选择与未来发展的长期陪伴。",
+    whyFiveTitle: "专业团队",
+    whyFiveTextOne: "团队成员拥有海外求学及跨文化发展经历，曾在新加坡国立大学、中国科学院从事科研与教学工作。",
+    whyFiveTextTwo: "长期深耕教育领域，善于发现学生优势与潜力，帮助他们突破成长瓶颈，找到适合自己的成长路径。",
+    whyFiveTextThree: "多年来，已陪伴和指导多名学生完成从升学规划到职业发展的关键阶段选择。",
+    processEyebrow: "Process",
+    processTitle: "服务流程",
+    stepOneTitle: "初步沟通",
+    stepOneText: "了解学生背景、家庭目标、预算范围和期望入学时间。",
+    stepTwoTitle: "路径评估",
+    stepTwoText: "梳理学校类型、升学路线、申请难点、风险和材料清单。",
+    stepThreeTitle: "申请执行",
+    stepThreeText: "推进选校、文书材料、报名申请、面试准备与签证指导。",
+    stepFourTitle: "落地支持",
+    stepFourText: "协助入境、住宿、陪读、银行开户和后续学业跟进。",
+    contactEyebrow: "Contact",
+    contactTitle: "联系我们",
+    contactText: "欢迎预约一次初步沟通，我们会根据孩子的阶段和目标提供下一步建议。",
+    contactEmailLabel: "邮箱 / Email",
+    contactWechatLabel: "微信 / WeChat",
+    contactChinaLabelOne: "联系电话",
+    contactChinaLabelTwo: "联系电话",
+    contactChinaOne: "刘先生 +86 13705215979",
+    contactChinaTwo: "武先生 +86 18612239691",
+    ctaEmail: "发送邮件",
+    ctaWechat: "复制微信号",
+    copiedWechat: "已复制微信号",
+    footerText: "科度咨询 / 科度教育咨询"
+  },
+  en: {
+    brandSub: "Singapore Education Consulting",
+    navAbout: "About",
+    navServices: "Services",
+    navPathways: "Pathways",
+    navWhy: "Why Us",
+    navProcess: "Process",
+    navContact: "Contact",
+    heroEyebrow: "Singapore Study Planning · Young Learners · Admissions",
+    heroTitle: "Find the degree that matters",
+    heroText: "From young learners to undergraduate and master pathways, we help students plan a route that fits their growth",
+    ctaBook: "Book a Consultation",
+    ctaWechatHero: "Contact on WeChat",
+    heroStatOne: "Full Pathway",
+    heroStatOneText: "Kindergarten to master planning",
+    heroStatTwo: "Bilingual Service",
+    heroStatTwoText: "Family communication and school coordination",
+    heroStatThree: "Local Support",
+    heroStatThreeText: "Visa, housing and guardian support",
+    heroStatFour: "Professional Team",
+    heroStatFourText: "We understand studying abroad and student growth",
+    heroTeamOne: "First-hand overseas study and career development experience",
+    heroTeamTwo: "Long-term study, work and life experience in Singapore",
+    heroTeamThree: "Familiar with Singapore's education system and pathways",
+    heroTeamFour: "Focused on long-term student growth and future development",
+    aboutEyebrow: "About CoreDue",
+    aboutTitle: "About CoreDue",
+    aboutStoryTitle: "Our Story",
+    aboutStoryLead: "The story of CoreDue began with people who had once walked the study-abroad path themselves.",
+    aboutStoryTextOne: "We have studied, worked and lived in China and Singapore, and we have also experienced the uncertainty of choosing a major, planning further studies and thinking about future development. Because we have personally walked this journey, we better understand the hopes, anxiety and uncertainty families face when making education choices.",
+    aboutStoryTextTwo: "Over the years, we have continued to follow student growth and pathway planning, witnessing many students move from hesitation to confidence, and from exploration to growth. We believe every child has their own rhythm and direction, and education planning is more than school applications. It is long-term guidance around growth, choices and future development.",
+    aboutStoryTextThree: "That is why we founded CoreDue: to combine our own experience, Singapore-based resources and professional insight to help more students find a path that truly fits.",
+    aboutQuote: "“Not more, but what truly matters.”",
+    aboutQuoteEn: "CoreDue helps families identify the decisive degree of change.",
+    servicesEyebrow: "Education Services",
+    servicesTitle: "Singapore Education Consulting Services",
+    servicesIntro: "We support families through school selection, applications, visa preparation and arrival with clear, practical planning.",
+    serviceOneTitle: "Young Learners & AEIS Pathway",
+    serviceOneText: "Planning for primary and secondary entry, AEIS preparation, PSLE, DSA and key transition points.",
+    serviceTwoTitle: "International / Private School Applications",
+    serviceTwoText: "School matching for IB, IGCSE, A-Level and AP curricula, with documentation, interview preparation and application follow-up.",
+    serviceThreeTitle: "Diploma, Undergraduate & Master Planning",
+    serviceThreeText: "Pathway planning across public universities, private institutions, foundation, diploma, undergraduate and postgraduate options.",
+    serviceFourTitle: "Student Visa & Settling-in Support",
+    serviceFourText: "Guidance for student pass documents, arrival, accommodation, parent accompaniment, banking and local settling-in.",
+    pathwaysEyebrow: "Singapore Pathways",
+    pathwaysTitle: "Study Pathways in Singapore",
+    pathOneTitle: "Government Primary & Secondary Schools",
+    pathOneText: "For families who value bilingual education, cost efficiency and long-term planning, with options such as Primary 1 entry, AEIS, PSLE and DSA.",
+    pathTwoTitle: "International Schools",
+    pathTwoText: "For students aiming for universities in the US, UK, Australia or beyond, covering IB, IGCSE, A-Level and AP curricula.",
+    pathThreeTitle: "Universities & Postgraduate Study",
+    pathThreeText: "Options include Singapore public universities, recognised private institutions, overseas university campuses and master programmes.",
+    whyEyebrow: "Why CoreDue",
+    whyTitle: "Why Choose Us",
+    whyOneTitle: "Singapore-based Insight",
+    whyOneText: "Familiar with local education systems, application rules, school ecosystems and settlement arrangements.",
+    whyTwoTitle: "Tailored Planning",
+    whyTwoText: "No template-driven school selection; plans are built around the student, family goals, timeline and budget.",
+    whyThreeTitle: "Transparent Communication",
+    whyThreeText: "Clear milestones, material requirements and ongoing application progress updates.",
+    whyFourTitle: "Long-term Support",
+    whyFourText: "Education planning is more than school applications. It is long-term guidance around growth, choices and future development.",
+    whyFiveTitle: "Professional Team",
+    whyFiveTextOne: "Our team members bring overseas study and cross-cultural development experience, with research and teaching experience at the National University of Singapore and the Chinese Academy of Sciences.",
+    whyFiveTextTwo: "We have long worked in education, helping students identify strengths, break through growth bottlenecks and find growth pathways that truly fit.",
+    whyFiveTextThree: "Over the years, we have supported and guided many students through key choices from academic planning to career development.",
+    processEyebrow: "Process",
+    processTitle: "Service Process",
+    stepOneTitle: "Initial Consultation",
+    stepOneText: "Understand the student background, family goals, budget range and target intake.",
+    stepTwoTitle: "Pathway Assessment",
+    stepTwoText: "Clarify school types, admission routes, challenges, risks and required documents.",
+    stepThreeTitle: "Application Execution",
+    stepThreeText: "Manage school selection, documents, applications, interview preparation and visa guidance.",
+    stepFourTitle: "Settling-in Support",
+    stepFourText: "Support arrival, housing, parent accompaniment, banking and follow-up academic needs.",
+    contactEyebrow: "Contact",
+    contactTitle: "Contact Us",
+    contactText: "Book an initial conversation and we will recommend practical next steps based on the student's stage and goals.",
+    contactEmailLabel: "Email",
+    contactWechatLabel: "WeChat",
+    contactChinaLabelOne: "China Phone",
+    contactChinaLabelTwo: "China Phone",
+    contactChinaOne: "Mr. Liu +86 13705215979",
+    contactChinaTwo: "Mr. Wu +86 18612239691",
+    ctaEmail: "Send Email",
+    ctaWechat: "Copy WeChat ID",
+    copiedWechat: "WeChat ID copied",
+    footerText: "Education Consulting"
+  }
+};
+
+let currentLang = "zh";
+
+const nav = document.querySelector(".nav");
+const navToggle = document.querySelector(".nav-toggle");
+const langToggle = document.querySelector("[data-lang-toggle]");
+
+function setLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    element.textContent = translations[lang][key] || element.textContent;
+  });
+  langToggle.textContent = lang === "zh" ? "EN" : "中文";
+}
+
+navToggle.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("nav-open");
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+langToggle.addEventListener("click", () => {
+  setLanguage(currentLang === "zh" ? "en" : "zh");
+});
+
+document.querySelectorAll("[data-copy-wechat]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText("CoreDue");
+      const originalText = translations[currentLang].ctaWechat;
+      button.textContent = translations[currentLang].copiedWechat;
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 1800);
+    } catch (error) {
+      button.textContent = "CoreDue";
+    }
+  });
+});
+
+setLanguage(currentLang);
+
+</script>
+</body>
+</html>
+
